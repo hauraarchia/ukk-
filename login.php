@@ -1,6 +1,3 @@
-<?php
-
-?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -47,13 +44,15 @@
                             </div>
                         </div>
                     </div>
-                    <?php
-                    session_start();
-                    $random_alpha = md5(rand());
-                    $captcha_code = substr($random_alpha, 0, 6);
-                    $_SESSION['captcha'] = $captcha_code;
-                    echo $_SESSION['captcha_code'] = $captcha_code;
-                    ?>
+                    <div style="background-color:aqua; color:black; width: 50px;">
+                        <?php
+                        session_start();
+                        $random_alpha = md5(rand());
+                        $captcha_code = substr($random_alpha, 0, 6);
+                        $_SESSION['captcha'] = $captcha_code;
+                        echo $_SESSION['captcha_code'] = $captcha_code;
+                        ?>
+                    </div>
                     <div class="input-group mb-3">
                         <input type="text" name="captcha" class="form-control" placeholder="Captcha" required>
                         <div class="input-group-append">
