@@ -16,6 +16,7 @@
                     <th>Jenis Kamar</th>
                     <th>Fasilitas Kamar</th>
                     <th>Jumlah Kasur</th>
+                    <th>Harga Kamar</th>
                     <th>Gambar Kamar</th>
                     <th>Aksi</th>
                 </tr>
@@ -31,6 +32,7 @@
                         <td><?php echo $row['nama_kamar'] ?></td>
                         <td><?php echo $row['fasilitas_kamar'] ?></td>
                         <td><?php echo $row['jumlah_kasur'] ?></td>
+                        <td><?php echo $row['harga'] ?></td>
                         <td><img src="../img/<?php echo $row["gambar_kamar"]; ?>" width=200 title="<?php echo $row["gambar_kamar"]; ?>"></td>
                         <td>
                             <a href="edit_kamar.php?id=<?php echo $row['id_kamar'] ?>" class="btn btn-sm btn-primary"><i class="fas fa-edit fa-sm text-white-50"></i> EDIT</a>

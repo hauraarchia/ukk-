@@ -21,6 +21,7 @@
                     <th>Tanggal Check Out</th>
                     <th>Jumlah Kamar</th>
                     <th>Tipe Kamar</th>
+                    <th>Status</th>
                     <th>Aksi</th>
                 </tr>
             </thead>
@@ -40,6 +41,26 @@
                         <td><?php echo $row['check_out'] ?></td>
                         <td><?php echo $row['jumlah'] ?></td>
                         <td><?php echo $row['tipe_kamar'] ?></td>
+                        <td>
+                            <form action="status.php?id_pemesanan=<?php echo $row['id_pemesanan'] ?>" method="post">
+                                <select name="status" class="d-none">
+                                    <?php if ($row['status'] == 0) : ?>
+                                        <option value="1">check-in</option>
+                                    <?php elseif ($row['status'] == 1) : ?>
+                                        <option value="2">check-out</option>
+                                    <?php endif ?>
+
+                                </select>
+                                <?php if ($row['status'] == 0) : ?>
+                                    <button type="submit" class="badge badge-warning border-0">Check-in</button>
+                                <?php elseif ($row['status'] == 1) : ?>
+                                    <button type="submit" class="badge badge-danger border-0">Check-out</button>
+                                <?php elseif ($row['status'] == 2) : ?>
+                                    <button type="button" class="badge badge-info border-0">Done</button>
+                                <?php endif ?>
+
+                            </form>
+                        </td>
                         <td> Update | Hapus</td>
                     </tr>
                 <?php } ?>

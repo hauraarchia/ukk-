@@ -82,34 +82,39 @@
     </div>
     <!-- bradcam_area_end -->
 
-    <!-- about_area_start -->
-    <div class="about_area">
+    <!-- <div class="about_area"> -->
+    <div class="features_room">
         <div class="container">
+            <div class="row">
+                <div class="col-xl-12">
+                    <div class="section_title text-center mb-100">
+                        <span>Featured Rooms</span>
+                        <h3>Choose a Better Room</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="rooms_here">
             <?php (include 'koneksi.php');
             $no = 1;
             $query = mysqli_query($kon, "SELECT * FROM fasilitas");
             while ($row = mysqli_fetch_array($query)) {
             ?>
-                <div class="row">
-                    <div class="col-xl-5 col-lg-5">
-                        <div class="about_info">
-                            <div class="section_title mb-20px">
-                                <span>Fasilitas Hotel</span>
+                <div class="single_rooms">
+                    <div class="room_thumb">
+                        <img src="img/fasilitas/<?php echo $row["gambar_fasilitas"]; ?>" width="560px" height="430px" alt="">
+                        <div class="room_heading d-flex justify-content-between align-items-center">
+                            <div class="room_heading_inner">
+                                <span><?php echo $row['ket_fasilitas'] ?></span>
                                 <h3><?php echo $row['nama_fasilitas'] ?></h3>
                             </div>
-                            <p><?php echo $row['ket_fasilitas'] ?></p>
-                        </div>
-                    </div>
-                    <div class="col-xl-7 col-lg-7">
-                        <div class="about_thumb d-flex">
-                            <div class="img_1" >
-                                <img src="img/fasilitas/<?php echo $row["gambar_fasilitas"]; ?>" alt="">
-                            </div>
+                            <a href="" class="popup-with-form" class="line-button"></a>
                         </div>
                     </div>
                 </div>
+            <?php } ?>
         </div>
-    <?php } ?>
+    </div>
     </div>
     <!-- about_area_end -->
 
@@ -153,53 +158,9 @@
     <!-- footer_end -->
 
     <!-- form itself end-->
-    <form id="test-form" class="white-popup-block mfp-hide" action="simpan.php" method="POST">
-        <div class="popup_box">
-            <div class="popup_inner">
-                <h3>Pesan Kamar</h3>
-
-                <form>
-                    <div class="row">
-                        <div class="input-group col-xl-12 mb-3">
-                            <input type="text" name="nama_pemesan" placeholder="Nama Pemesan" class="form-control">
-                        </div>
-                        <div class="input-group col-xl-12 mb-3">
-                            <input type="email" name="email" placeholder="Email" class="form-control">
-                        </div>
-                        <div class="input-group col-xl-12 mb-3">
-                            <input type="number" name="no_hp" placeholder="Nomor Handphone" class="form-control">
-                        </div>
-                        <div class="input-group col-xl-12 mb-3">
-                            <input type="text" name="nama_tamu" placeholder="Nama Tamu" class="form-control">
-                        </div>
-                        <div class="col-xl-6">
-                            <input id="datepicker" name="cekin" placeholder="Check in date" />
-                        </div>
-                        <div class="col-xl-6">
-                            <input id="datepicker2" name="cekout" placeholder="Check out date" />
-                        </div>
-                        <div class="input-group col-xl-12 mb-3">
-                            <input type="number" name="jumlah" placeholder="Jumlah Kamar" class="form-control">
-                        </div>
-                        <div class="col-xl-12">
-                            <select class="form-select wide" name="room_tipe" id="default-select" class="">
-                                <option data-display="Room type">Room type</option>
-                                <option value="1">Laxaries Rooms</option>
-                                <option value="2">Deluxe Room</option>
-                                <option value="3">Signature Room</option>
-                                <option value="4">Couple Room</option>
-                            </select>
-                        </div>
-                        <div class="col-xl-12">
-                            <button type="submit" class="boxed-btn3">
-                                PESAN KAMAR
-                            </button>
-                        </div>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </form>
+    <?php
+    include('pesan_kamar.php');
+    ?>
     <!-- form itself end -->
 
 

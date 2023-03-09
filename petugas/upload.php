@@ -5,6 +5,7 @@ if (isset($_POST["proses"])) {
     $nama_kamar = $_POST["nama_kamar"];
     $fasilitas_kamar = $_POST["fasilitas_kamar"];
     $jumlah = $_POST["jumlah"];
+    $harga = $_POST["harga"];
 
     if ($_FILES["gambar"]["error"] == 4) {
         echo
@@ -34,7 +35,7 @@ if (isset($_POST["proses"])) {
             $newImageName .='.' . $imageExtension;
 
             move_uploaded_file($tmpName, '../img/' . $newImageName);
-            $query = "INSERT INTO kamar VALUES('', '$nama_kamar', '$fasilitas_kamar' , '$jumlah', '$newImageName')";
+            $query = "INSERT INTO kamar VALUES('', '$nama_kamar', '$fasilitas_kamar' , '$jumlah', '$harga', '$newImageName')";
             mysqli_query($kon, $query);
             echo
             "<script> 

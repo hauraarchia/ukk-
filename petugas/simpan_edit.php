@@ -6,6 +6,7 @@ if (isset($_POST["proses"])) {
     $nama_kamar = $_POST["nama_kamar"];
     $fasilitas_kamar = $_POST["fasilitas_kamar"];
     $jumlah = $_POST["jumlah"];
+    $harga = $_POST["harga"];
 
     if ($_FILES["gambar"]["error"] == 4) {
         echo
@@ -30,7 +31,7 @@ if (isset($_POST["proses"])) {
 
             move_uploaded_file($tmpName, '../img/' . $newImageName);
             $query = "UPDATE kamar SET nama_kamar='$nama_kamar',fasilitas_kamar='$fasilitas_kamar',
-            jumlah_kasur='$jumlah', gambar_kamar='$newImageName' where id_kamar ='$id_kamar'";
+            jumlah_kasur='$jumlah', harga='$harga', gambar_kamar='$newImageName' where id_kamar ='$id_kamar'";
             mysqli_query($kon, $query);
             echo
             "<script> 

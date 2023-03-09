@@ -193,53 +193,9 @@
   <!-- link that opens popup -->
 
   <!-- form itself end-->
-  <form id="test-form" class="white-popup-block mfp-hide" action="simpan.php" method="POST">
-    <div class="popup_box">
-      <div class="popup_inner">
-        <h3>Pesan Kamar</h3>
-
-        <form>
-          <div class="row">
-            <div class="input-group col-xl-12 mb-3">
-              <input type="text" name="nama_pemesan" placeholder="Nama Pemesan" class="form-control">
-            </div>
-            <div class="input-group col-xl-12 mb-3">
-              <input type="email" name="email" placeholder="Email" class="form-control">
-            </div>
-            <div class="input-group col-xl-12 mb-3">
-              <input type="number" name="no_hp" placeholder="Nomor Handphone" class="form-control">
-            </div>
-            <div class="input-group col-xl-12 mb-3">
-              <input type="text" name="nama_tamu" placeholder="Nama Tamu" class="form-control">
-            </div>
-            <div class="col-xl-6">
-              <input id="datepicker" name="cekin" placeholder="Check in date" />
-            </div>
-            <div class="col-xl-6">
-              <input id="datepicker2" name="cekout" placeholder="Check out date" />
-            </div>
-            <div class="input-group col-xl-12 mb-3">
-              <input type="number" name="jumlah" placeholder="Jumlah Kamar" class="form-control">
-            </div>
-            <div class="col-xl-12">
-              <select class="form-select wide" name="room_tipe" id="default-select" class="">
-                <option data-display="Room type">Room type</option>
-                <option value="Duluxe Rooms">Duluxe Rooms</option>
-                <option value="Family Room">Family Room</option>
-                <option value="Exclusive Room">Exclusive Room</option>
-                <option value="Superior Room">Superior Room</option>
-              </select>
-            </div>
-            <div class="col-xl-12">
-              <button type="submit" class="boxed-btn3">
-                PESAN KAMAR
-              </button>
-            </div>
-          </div>
-        </form>
-      </div>
-    </div>
-  </form>
+  <?php
+  include('pesan_kamar.php');
+  ?>
   <!-- form itself end -->
 
   <!-- JS here -->

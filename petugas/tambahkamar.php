@@ -48,6 +48,10 @@
                                     <input type="number" name="jumlah" class="form-control" id="exampleInputPassword1" placeholder="Masukan Jumlah Kasur">
                                 </div>
                                 <div class="form-group">
+                                    <label>Harga Kamar</label>
+                                    <input type="number" name="harga" class="form-control" id="exampleInputPassword1" placeholder="Masukan Harga Kamar">
+                                </div>
+                                <div class="form-group">
                                     <label for="exampleInputFile">Upload Gambar</label>
                                     <div class="input-group">
                                         <div class="custom-file">
