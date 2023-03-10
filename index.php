@@ -61,13 +61,6 @@
                 </a>
               </div>
             </div>
-            <div class="col-xl-5 col-lg-4 d-none d-lg-block">
-              <div class="book_room">
-                <div class="book_btn d-none d-lg-block">
-                  <a class="popup-with-form" href="#test-form">Pesan Kamar</a>
-                </div>
-              </div>
-            </div>
             <div class="col-12">
               <div class="mobile_menu d-block d-lg-none"></div>
             </div>
@@ -88,42 +81,6 @@
               <div class="slider_text text-center">
                 <h3>Hotel Hebat</h3>
                 <p>Nikmati Pemandangan Pantai</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="single_slider d-flex align-items-center justify-content-center slider_bg_2">
-        <div class="container">
-          <div class="row">
-            <div class="col-xl-12">
-              <div class="slider_text text-center">
-                <h3>Life is Beautiful</h3>
-                <p>Unlock to enjoy the view of Martine</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="single_slider d-flex align-items-center justify-content-center slider_bg_1">
-        <div class="container">
-          <div class="row">
-            <div class="col-xl-12">
-              <div class="slider_text text-center">
-                <h3>Montana Resort</h3>
-                <p>Unlock to enjoy the view of Martine</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="single_slider d-flex align-items-center justify-content-center slider_bg_2">
-        <div class="container">
-          <div class="row">
-            <div class="col-xl-12">
-              <div class="slider_text text-center">
-                <h3>Life is Beautiful</h3>
-                <p>Unlock to enjoy the view of Martine</p>
               </div>
             </div>
           </div>
@@ -193,9 +150,6 @@
   <!-- link that opens popup -->
 
   <!-- form itself end-->
-  <?php
-  include('pesan_kamar.php');
-  ?>
   <!-- form itself end -->
 
   <!-- JS here -->

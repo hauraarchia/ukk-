@@ -22,7 +22,6 @@
                     <th>Jumlah Kamar</th>
                     <th>Tipe Kamar</th>
                     <th>Status</th>
-                    <th>Aksi</th>
                 </tr>
             </thead>
             <tbody>
@@ -61,7 +60,6 @@
 
                             </form>
                         </td>
-                        <td> Update | Hapus</td>
                     </tr>
                 <?php } ?>
             </tbody>
